@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Sample Category"
+            id="com.hzy.jdt.commands.category">
+      </category>
+      <command
+            name="Sample Command"
+            categoryId="com.hzy.jdt.commands.category"
+            id="com.hzy.jdt.commands.sampleCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="com.hzy.jdt.commands.sampleCommand"
+            class="com.hzy.jdt.handlers.SampleHandler">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.hzy.jdt.commands.sampleCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               label="Sample Menu"
+               mnemonic="M"
+               id="com.hzy.jdt.menus.sampleMenu">
+            <command
+                  commandId="com.hzy.jdt.commands.sampleCommand"
+                  mnemonic="S"
+                  id="com.hzy.jdt.menus.sampleCommand">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="com.hzy.jdt.toolbars.sampleToolbar">
+            <command
+                  commandId="com.hzy.jdt.commands.sampleCommand"
+                  icon="icons/button.png"
+                  tooltip="Bread Milk"
+                  id="com.hzy.jdt.toolbars.sampleCommand">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>
