@@ -19,7 +19,7 @@
 使用前保证Java环境为JDK 1.7或JDK 1.8，Eclipse版本为2018版及以上即可。
 
 ## 安装步骤
-> 安装步骤较为简单，只要把我们提供的jar包放在\eclipse\plugins目录下，然后删除\eclipse\configuration\org.eclipse.update\platform.xml，最后重启eclipse就可以了。
+> 安装步骤较为简单。将插件工程export成jar包，然后把jar包放在\eclipse\plugins目录下，然后删除\eclipse\configuration\org.eclipse.update\platform.xml，最后重启eclipse就可以了。
 
 ## 使用说明
 > 安装完成后，启动eclipse，工具栏中会出现插件的图标：
